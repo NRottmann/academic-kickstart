@@ -35,7 +35,7 @@ featured: true
 # links:
 # - name: Custom Link
 #  url: https://www.scitepress.org/PublicationsDetail.aspx?ID=IpTmQoBTbwc%3d&t=1
-url_pdf: https://www.scitepress.org/PublicationsDetail.aspx?ID=IpTmQoBTbwc%3d&t=1
+url_pdf: https://arxiv.org/abs/1908.04564
 #url_code: '#'
 #url_dataset: '#'
 #url_poster: '#'

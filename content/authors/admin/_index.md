@@ -18,7 +18,7 @@ organizations:
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: Mobile Robots. Sensors. Machine Learning. Dancing.
+bio: In 2017, Nils Rottmann received his M.Sc. in Theoretical Mechanical Engineering from the Hamburg University of Technology. During his studies he worked as intern at the UNESP in Ilha Solteira, Brazil, and completed an exchange semester at the Tecnico Lisboa, Portugal. In January 2018, he joined the Institute for Robotics and Cognitive Systems at the University of Lübeck as a Research Associate. The focus of his work lies on autonomous systems.
 
 interests:
 - Mobile Robotics
@@ -41,13 +41,13 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'rottmann [at] rob [dot] uni-luebeck [dot] de'  # For a direct email link, use "mailto:test@example.org".
+  link: 'mailto:rottmann[at]rob[dot]uni-luebeck[dot]de'  # For a direct email link, use "mailto:test@example.org".
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/rottmann_nils
 - icon: google-scholar
   icon_pack: ai
-  link: https://google.com
+  link: https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AJsN-F5kQjB_tXPL5D1XWu4h4WoQjIgk0IgPS3RaddrVlH_8YlGlkYM9_tlhULLGgdoObbOXj23tUf5J5QIymN4XDTiu3zCqnJcUST37egIdtykkXpJkWJc&user=6tvmhbQAAAAJ
 - icon: github
   icon_pack: fab
   link: https://github.com/NRottmann
@@ -68,4 +68,4 @@ user_groups:
 
 ---
 
-In 2017, Nils Rottmann received his M.Sc. in Theoretical Mechanical Engineering from the Hamburg University of Technology. During his studies he worked as intern at the UNESP in Ilha Solteira, Brazil, and completed an exchange semester at the Tecnico Lisboa, Portugal. In January 2018, he joined the Institute for Robotics and Cognitive Systems at the University of Lübeck as a Research Associate. The focus of his work lies on autonomous systems.
+Mobile Robots. Sensors. Machine Learning. Dancing.
