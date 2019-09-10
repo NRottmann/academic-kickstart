@@ -1,16 +1,16 @@
 ---
-title: MIRANA Pitch
-event: Healthcare Hackathon Berlin 2019
+title: MIRANA
+event: Healthcare Hackathon Kiel 2019
 event_url: https://www.healthcare-hackathon.info/
-location: Berlin, Germany
+location: Kiel, Germany
 summary: An introduction to the MIRANA project
-abstract: "A pitch of the MIRANA project, a mobile intelligent robotic assistant for navigation and assistance. The features of MIRANA will be introduced and the current progress will be demonstrated."
+abstract: "A talk about the MIRANA project, a mobile intelligent robotic assistant for navigation and assistance. The features of MIRANA will be introduced and the current progress will be demonstrated."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2019-09-03T13:00:00Z"
-#date_end: "2030-06-01T15:00:00Z"
-all_day: true
+date: "2019-09-12T12:50:00Z"
+date_end: "2019-09-12T13:15:00Z"
+all_day: false
 
 # Schedule page publish date (NOT talk date).
 publishDate: "2019-08-29T00:00:00Z"
