@@ -7,14 +7,14 @@ tags:
 - Mobile Robotics
 categories: []
 date: "2019-11-08T14:00:00Z"
-featured: false
+featured: true
 draft: false
-event_url: https://www.ln-online.de/Mehr/Bilder/Bilder-des-Tages/2019/11/Roboter-im-Alltag-Diese-digitalen-Helfer-gibt-es-im-UKSH/1
+event_url: ""
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 image:
-  caption: ""
+  caption: "By Lübecker Nachrichten"
   focal_point: ""
 
 # Projects (optional).
@@ -24,5 +24,6 @@ image:
 #   `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects:
-- internal-project
+- external-project
 ---
+The Lübecker Nachrichten reports about robots in everyday life: digital helpers are available at UKSH. Our MIRANA project is also part of it. Have a look whole report [here](https://www.ln-online.de/Nachrichten/Norddeutschland/Roboter-im-Klinik-Alltag-am-UKSH-Luebeck-So-fortschrittlich-sind-Krankenhaeuser-im-Norden).

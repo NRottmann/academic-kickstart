@@ -148,6 +148,7 @@ sharing = true
   post_view = 2
   publication_view = 2
   talk_view = 2
+  thesis_view = 2
 
 # Comments.
 [comments]

@@ -29,6 +29,11 @@
   weight = 40
 
 [[main]]
+  name = "Theses"
+  url = "#theses"
+  weight = 45
+
+[[main]]
   name = "Popular Topics"
   url = "#tags"
   weight = 50

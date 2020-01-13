@@ -1,12 +1,9 @@
 ---
-title: "Cataglyphis ant navigation strategies solve the global localization problem in robots with binary sensors"
+title: "Complete coverage path planning for low cost robots"
 authors:
-- admin
-- Ralf Bruder
-- Achim Schweikard
-- Elmar Rueckert
-date: "2019-02-21T00:00:00Z"
-doi: "10.5220/0007556102140223"
+- Robin Denz
+date: "2019-11-11T00:00:00Z"
+doi: ""
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2019-08-11T00:00:00Z"
@@ -15,27 +12,27 @@ publishDate: "2019-08-11T00:00:00Z"
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
-publication_types: ["1"]
+publication_types: ["7"]
 
 # Publication name and optional abbreviated publication name.
-publication: In *BIOSIGNALS*
+publication: University of Luebeck
 # publication_short: In *STC*
 
-abstract: "Low cost robots, such as vacuum cleaners or lawn mowers, employ simplistic and often random navigation policies. Although a large number of sophisticated localization and planning approaches exist, they require additional sensors like LIDAR sensors, cameras or time of flight sensors. In this work, we propose a global localization method biologically inspired by simple insects, such as the ant Cataglyphis that is able to return from distant locations to its nest in the desert without any or with limited perceptual cues. Like in Cataglyphis, the underlying idea of our localization approach is to first compute a pose estimate from pro-prioceptual sensors only, using land navigation, and thereafter refine the estimate through a systematic search in a particle filter that integrates the rare visual feedback.
-In simulation experiments in multiple environments, we demonstrated that this bioinspired principle can be used to compute accurate pose estimates from binary visual cues only. Such intelligent localization strategies can improve the performance of any robot with limited sensing capabilities such as household robots or toys."
+abstract: ""
 
 # Summary. An optional shortened abstract.
 # summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
 
 tags:
 - Mobile Robotics
-- Localization
+- Navigation
+- Planning
 featured: true
 
 # links:
 # - name: Custom Link
 #  url: https://www.scitepress.org/PublicationsDetail.aspx?ID=IpTmQoBTbwc%3d&t=1
-url_pdf: https://arxiv.org/abs/1908.04564
+url_pdf: https://drive.google.com/file/d/1dbHfc7PN9wmcP0TP9cHxJaUdqhJgQvFS/view?usp=sharing
 #url_code: '#'
 #url_dataset: '#'
 #url_poster: '#'
@@ -47,7 +44,7 @@ url_pdf: https://arxiv.org/abs/1908.04564
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 image:
-  caption: '”Cataglyphis nodus” by (Bobzin, 2013).'
+  caption: ""
   focal_point: ""
   preview_only: false
 
@@ -66,3 +63,15 @@ projects: []
 #   Otherwise, set `slides: ""`.
 slides: ""
 ---
+## Abstract
+The demand among the population for household robots continues to rise.
+These include in particular mobile cleaning and lawn mowing robots. These
+are usually very expensive and still very inefficient. Especially for lawn mowing robots, it is essential to have visited the entire working space in order to
+perform their task correctly. However, the current state of the art is still random walk algorithms, which are very unreliable and inefficient. The present
+bachelor thesis therefore presents a method for intelligent path planning for
+mobile "low cost"robots using a lawn mower robot. The robot is only equipped
+with binary sensors to detect its position in its working space, which is fraught
+with high uncertainties. By an intelligent representation of the already visited
+working space as well as the path planning inspired by neural networks, the
+lawn mower robot manages to achieve a decisive improvement in efficiency
+compared to the random walk.
