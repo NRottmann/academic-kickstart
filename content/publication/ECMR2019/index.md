@@ -6,7 +6,7 @@ authors:
 - Achim Schweikard
 - Elmar Rueckert
 date: "2019-09-05T00:00:00Z"
-doi: ""
+doi: "10.1109/ECMR.2019.8870938"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2019-08-29T00:00:00Z"
