@@ -15,7 +15,7 @@ ROS coordinates and controls the components needed for navigation and scheduling
 
 In this talk you will get an overview of the relevant topics which are necessary for the development of the presented robot assistant. \n \n
 
-The slides from the talk can be found [here](https://drive.google.com/file/d/1Bnbc1dg_t3Sod5PUtA1A9em1Pt5BzEVv/view?usp=sharing)."
+The slides from the talk can be found [here](https://drive.google.com/file/d/1Bnbc1dg_t3Sod5PUtA1A9em1Pt5BzEVv/view?usp=sharing) and the a video of the talk can be found [here](https://www.youtube.com/watch?v=wDskFiekJHA&t=2695s)."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.

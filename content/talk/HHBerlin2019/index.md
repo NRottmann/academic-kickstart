@@ -1,15 +1,15 @@
 ---
-title: MIRANA
-event: Healthcare Hackathon Kiel 2019
+title: Healthcare Hackathon Berlin Speech
+event: Healthcare Hackathon Berlin 2019
 event_url: https://www.healthcare-hackathon.info/
-location: Kiel, Germany
-summary: An introduction to the MIRANA project
-abstract: "A talk about the MIRANA project, a mobile intelligent robotic assistant for navigation and assistance. The features of MIRANA will be introduced and the current progress will be demonstrated."
+location: Berlin, Germany
+summary: Face Recognition for the MIRANA Project
+abstract: "A talk about possible Face Recognition and Person Detection techniques applicable to the MIRANA project."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2019-09-12T12:50:00Z"
-date_end: "2019-09-12T13:15:00Z"
+date: "2019-09-03T12:50:00Z"
+date_end: "2019-09-03T13:15:00Z"
 all_day: false
 
 # Schedule page publish date (NOT talk date).
@@ -18,16 +18,13 @@ publishDate: "2019-08-29T00:00:00Z"
 authors: []
 tags:
 - Mobile Robotics
-- SLAM
-- Navigation
-- Planning
-- Speech Recognition
+- Face Detection
 
 # Is this a featured talk? (true/false)
 featured: false
 
 image:
-  caption: 'Image by Nico Studt'
+  caption: 'Image by Emre Erguen'
   focal_point: Right
 
 links:
