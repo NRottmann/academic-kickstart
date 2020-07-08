@@ -1,11 +1,11 @@
 ---
-title: ECMR 2019, Prag
-summary: The European Conference on Mobile Robots 2019 in Prag finished. Three days of interesting talks about a wide variety of mobile applications.
+title: MLSS 2020, Tuebingen, virtual
+summary: The Machine Learning Summer School 2020 in Tuebingen, this time as a virtual event.
 authors:
 - admin
 tags: []
 categories: []
-date: "2019-09-06T20:00:00Z"
+date: "2020-06-29T20:00:00Z"
 featured: false
 draft: false
 
@@ -24,4 +24,4 @@ image:
 projects:
 - internal-project
 ---
-The European Conference on Mobile Robots 2019 in Prag finished. Three days of interesting talks about a wide variety of mobile applications and algorithms for mobile applications. If you want to have a closer look onto the given topics, feel free to visit the [website](https://www.ecmr2019.eu/).
+I had the opportunity to attend the MLSS 2020. I got a lot of interesting insights into the different fields of Machine Learning such as Causality, Fairness, Reinforcement Learning and many more. Most of the lectures hold during the summer school are available at YouTube. For further information, just visit the [website](http://mlss.tuebingen.mpg.de/2020/).

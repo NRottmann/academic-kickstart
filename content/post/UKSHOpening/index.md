@@ -25,3 +25,4 @@ image:
 projects:
 - internal-project
 ---
+The opening of the USKH in Lübeck was a nice event where we had again the opportunity to present our MIRANA robot. The opening was together with an open house day, which gave us the opportunity to directly test on how MIRANA resonates with the potential patientes.
