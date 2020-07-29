@@ -10,6 +10,6 @@ date: "2019-08-10T00:00:00Z"
 external_link: https://train.ai-lab.science/
 
 image:
-  caption:
+  caption: Image by Elmar Rueckert
   focal_point: Smart
 ---
