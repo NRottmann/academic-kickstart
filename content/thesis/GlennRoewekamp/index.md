@@ -63,3 +63,5 @@ projects: []
 #   Otherwise, set `slides: ""`.
 slides: ""
 ---
+## Abstract
+Medical interventions are often supported by imaging and position-determining procedures. In this thesis we investigate to what extent electromagnetic tracking systems can be used for accurate positioning. The focus is first on 2D, then on 3D systems.

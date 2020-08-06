@@ -62,3 +62,5 @@ projects: []
 #   Otherwise, set `slides: ""`.
 slides: ""
 ---
+## Abstract
+Low cost robots, such as vacuum cleaners or lawn mowers employ simplistic and often random navigation policies. Although a large number of sophisticated mapping and planning approaches exist, they require additional sensors like LIDAR sensors, cameras or time of flight sensors. In this work, we investigate SLAM techniques for efficient mapping and localization with limited sensing capabilities.
