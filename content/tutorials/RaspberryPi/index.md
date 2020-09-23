@@ -12,7 +12,7 @@ date: "2019-08-10T00:00:00Z"
 # external_link: https://drive.google.com/file/d/1ETcGr-VNiLwYiKZt7uLALdF-uuvFJJFh/view
 
 image:
-  caption: 
+  caption:
   focal_point: Smart
 ---
 # Raspberry Pi for Mobile Robots
@@ -41,7 +41,7 @@ A complete Image with existing ROS installation and WLAN access point can be fou
 
 [ROS over Mobile Web](#ROSWeb) <br/>
 
-[Test the System](#Test) <br/>
+[Video for Linux (V4L) and ROS](#Video) <br/>
 
 [Eigen3 Installation](#EIGEN) <br/>
 
@@ -165,7 +165,7 @@ source /opt/ros/melodic/setup.bash
 echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
 ````
 
-ROS is now completely set up. If you require additional packages, follow up [this procedure]([http://wiki.ros.org/ROSberryPi/Installing%20ROS%20Melodic%20on%20the%20Raspberry%20Pi#Adding_Released_Packages](http://wiki.ros.org/ROSberryPi/Installing ROS Melodic on the Raspberry Pi#Adding_Released_Packages)).
+ROS is now completely set up. If you require additional packages, follow up [this procedure](http://wiki.ros.org/ROSberryPi/Installing ROS Melodic on the Raspberry Pi#Adding_Released_Packages).
 
 
 
@@ -408,13 +408,19 @@ cat /dev/sensor01
 
 ## Mobile Web <a name="Web"></a>
 
-To allow the Raspberry Pi to connect to the Mobile Web, we can use the [Raspberry Pi 3G/4G & LTE Base HAT](https://sixfab.com/product/raspberry-pi-base-hat-3g-4g-lte-minipcie-cards/) together with a prepaid mobile SIMcard (e.g. Aldi Talk). Follow up [this tutorial](https://sixfab.com/category/raspberry-pi-3g-4g-lte-base-shield/) to get started. You require your APN, which would be for Aldi Talk
+To allow the Raspberry Pi to connect to the Mobile Web, we can use the [Raspberry Pi 3G/4G & LTE Base HAT](https://sixfab.com/product/raspberry-pi-base-hat-3g-4g-lte-minipcie-cards/) together with a prepaid mobile SIMcard (e.g. Aldi Talk). Follow up [this tutorial](https://sixfab.com/ppp-installer-for-sixfab-shield-hat/) to get started. You require your APN, which would be for Aldi Talk
 
 ````
 internet.eplus.de
 ````
 
-You can test your internet connection by using "nslookup"
+You can test your internet connection by installing
+
+````shell
+sudo apt install dnsutils
+````
+
+and using "nslookup"
 
 ````shell
 nslookup google.de
@@ -643,7 +649,8 @@ where we insert the correct static server IP. Put the "client1.key", "client1.cr
 sudo openvpn client.conf
 ````
 
-## Test the System <a name="Test"></a>
+#### Test the System 
+
 In order to check if our system works for sending ROS messages, we can use a simple talker node. Therefore, download the [sample code](https://drive.google.com/drive/folders/1PC52Sx3O7vkILSU1u4OL9ehUbs8QH7KW?usp=sharing) onto one of your clients which consist of a ROS package, which should be placed into the "src" folder of a catkin workspace. Thus, we first create such a workspace and "src" folder
 
 ````
@@ -665,6 +672,71 @@ The accompanied bash script will set all required environmental variables and st
 ````
 
 Now, we can try to listen to the chatter topic from a different client or from the server. Be aware, that you also have to set the correct IP address onto these system.
+
+## Video for Linux (V4L) and ROS<a name="Video"></a>
+
+Let's assume you have a V4L compatible camera which you can simply plug in to one of the USB ports of the Raspberry Pi. You can check whether the camera is correctly recognized by typing
+
+````shell
+ls /dev/video*
+````
+
+You should get some video devices as return, e.g. /dev/video0 or /dev/video1. The different devices stand for different output formats of the connected camera, e.g. MJPG or H.264. In order to check this as well as supported framerates and framesizes, type
+
+```shell
+v4l2-ctl --device=0 --list-formats-ext
+```
+
+#### Streaming via VLC
+
+We can now feed forward the video stream via a VLC server installing first VLC 
+
+````shell
+sudo apt-get install vlc
+````
+
+and then using
+
+````shell
+cvlc -vvv v4l2:///dev/video0 --sout '#rtp{sdp=rtsp://:8554/}' :demux=h264
+````
+
+To get access to the stream, we can now open the VLC media player on any other device connected to the same network as the Raspberry Pi, open the Tab "media", open "open network stream" and insert
+
+````
+rtsp://141.83.19.37:8554/
+````
+
+#### Video to ROS
+
+In order to feed forward video data to the ROS system, we can use "usb_cam" together with "compressed_image_transport". Unfortunately, ROS currently does not support the H.264 format such that we have to use the MJPG compression format. Start now by installing the required nodes following up [this procedure](http://wiki.ros.org/ROSberryPi/Installing ROS Melodic on the Raspberry Pi#Adding_Released_Packages) 
+
+````shell
+cd ~/ros_catkin_ws
+rosinstall_generator usb_cam compressed_image_transport --rosdistro melodic --deps --wet-only --tar > melodic-custom_ros.rosinstall
+wstool merge -t src melodic-custom_ros.rosinstall
+wstool update -t src
+rosdep install --from-paths src --ignore-src --rosdistro melodic -y -r --os=debian:buster
+sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/melodic -j1
+````
+
+After installing everything, we can then create a launch file
+
+````shell
+<launch>
+  <node name="usb_cam" pkg="usb_cam" type="usb_cam_node" output="screen" >
+    <param name="video_device" value="/dev/video0" />
+    <param name="image_width" value="640" />
+    <param name="image_height" value="480" />
+    <param name="pixel_format" value="yuyv" />
+    <param name="camera_frame_id" value="usb_cam" />
+    <param name="io_method" value="mmap"/>
+  </node>
+</launch>
+````
+
+filling up the correct parameters which can be detected with above mentioned "cvlc".
+
 
 
 ## Eigen3 Installation <a name="EIGEN"></a>
