@@ -33,6 +33,8 @@ A complete Image with existing ROS installation and WLAN access point can be fou
 
 [WLAN Configuration](#WLAN) <br/>
 
+[External WLAN Connection](#ExtWLAN) <br/>
+
 [Enable SPI and UART Connection](#UART) <br/>
 
 [Define static addresses for USB ports](#USB) <br/>
@@ -335,7 +337,30 @@ where "active" and "loaded" should be stated. We can now access the WLAN "myRobo
 
 You can also find the presented tutorial [here](https://www.elektronik-kompendium.de/sites/raspberry-pi/2002171.htm) (it is in german).
 
+## External WLAN Connection<a name="ExtWLAN"></a>
 
+If you want the Raspberry to access an external WLAN instead of open an own one, just open
+
+````shell
+sudo nano /etc/network/interfaces
+````
+
+and add the WLAN specification
+
+````shell
+# External WLAN
+allow-hotplug wlan0
+iface wlan0 inet manual
+wpa-ssid "WLAN-NAME"
+wpa-psk "WLAN-PASSWORT"
+````
+
+Afterwards, restart the interface
+
+````shell
+sudo ifdown wlan0
+sudo ifup wlan0
+````
 
 ## Enable SPI and UART Connection <a name="UART"></a>
 
