@@ -18,7 +18,7 @@ organizations:
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: With January 2018, Nils Rottmann is a PhD student and research scientist at the Institute for Robotics and Cognitive Systems at the University of Luebeck. In his doctoral study, with the title “Learning Optimal Control and Planning Strategies in Mobile and Humanoid Robots”, he develops low-cost sensor systems and investigates probabilistic learning and modeling approaches. His research addresses the challenges of learning adaptive control strategies from few and sparse data and to predict and plan complex motions in dynamical systems. He holds a master’s degree in Theoretical Mechanical Engineering from the Hamburg University of Technology, Germany. Nils Rottmann graduated with honors in December 2017 with a thesis entitled „ Geometric Control and Stochastic Trajectory Planning for Underwater Robotic Systems“.
+bio: With January 2018, Nils Rottmann is a PhD student and research scientist at the Institute for Robotics and Cognitive Systems at the University of Luebeck. In his doctoral study, with the title “Optimal Sensor Development, Navigation and Learning Strategies for Autonomous Systems”, he develops low-cost sensor systems and investigates probabilistic learning and modeling approaches. His research addresses the challenges of learning adaptive control strategies from few and sparse data and to predict and plan complex motions in dynamical systems. He holds a master’s degree in Theoretical Mechanical Engineering from the Hamburg University of Technology, Germany. Nils Rottmann graduated with honors in December 2017 with a thesis entitled „Geometric Control and Stochastic Trajectory Planning for Underwater Robotic Systems“.
 
 interests:
 - Mobile Robotics

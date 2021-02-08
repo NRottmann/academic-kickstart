@@ -1,8 +1,8 @@
 ---
 title: Think at IBM
-event: Healthcare Hackathon Kiel 2019
-event_url: https://www.healthcare-hackathon.info/
-location: Kiel, Germany
+event: Think at IBM in Berlin 2019
+event_url: 
+location: Berlin, Germany
 summary: An introduction to the MIRANA project
 abstract: "A talk about the MIRANA project, a mobile intelligent robotic assistant for navigation and assistance. The features of MIRANA will be introduced and the current progress will be demonstrated."
 

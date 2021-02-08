@@ -2,8 +2,8 @@
 # Accomplishments widget.
 widget = "accomplishments"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
-active = false  # Activate this widget? true/false
-weight = 50  # Order that this section will appear.
+active = true  # Activate this widget? true/false
+weight = 110  # Order that this section will appear.
 
 title = "Accomplish&shy;ments"
 subtitle = ""
@@ -21,31 +21,21 @@ date_format = "Jan 2006"
 [[item]]
   organization = "Coursera"
   organization_url = "https://www.coursera.org"
-  title = "Neural Networks and Deep Learning"
+  title = "Linear Circuits 1: DC Analysis"
   url = ""
-  certificate_url = "https://www.coursera.org"
-  date_start = "2018-10-01"
+  certificate_url = "https://drive.google.com/file/d/1KyhlvxUwbr6jbZSFUMA4UC1G220RjE7W/view?usp=sharing"
+  date_start = "2020-12-03"
   date_end = ""
   description = ""
 
-[[item]]
-  organization = "edX"
-  organization_url = "https://www.edx.org"
-  title = "Blockchain Fundamentals"
-  url = "https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals"
-  certificate_url = "https://www.edx.org"
-  date_start = "2018-03-01"
-  date_end = ""
-  description = "Formulated informed blockchain models, hypotheses, and use cases."
-
-[[item]]
-  organization = "DataCamp"
-  organization_url = "https://www.datacamp.com"
-  title = "Object-Oriented Programming in R: S3 and R6 Course"
-  url = ""
-  certificate_url = "https://www.datacamp.com"
-  date_start = "2017-07-01"
-  date_end = "2017-12-21"
-  description = ""
+  [[item]]
+    organization = "Coursera"
+    organization_url = "https://www.coursera.org"
+    title = "Linear Circuits 2: AC Analysis"
+    url = ""
+    certificate_url = "https://drive.google.com/file/d/1V-WoLlBa3lzq2ielR0_gFIkEBzHOE1BR/view?usp=sharing"
+    date_start = "2020-12-03"
+    date_end = ""
+    description = ""
 
 +++
