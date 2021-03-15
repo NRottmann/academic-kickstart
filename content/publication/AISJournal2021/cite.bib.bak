@@ -1,0 +1,17 @@
+% Encoding: UTF-8
+
+@Article{Cansev2021,
+  author    = {Mehmet Ege Cansev and Honghu Xue and Nils Rottmann and Adna Bliek and Luke E. Miller and Elmar Rueckert and Philipp Beckerle},
+  journal   = {Advanced Intelligent Systems},
+  title     = {Interactive Human-Robot Skill Transfer: A Review of Learning Methods and User Experience},
+  year      = {2021},
+  pages     = {1--28},
+  date      = {2021-03-10},
+  doi       = {10.1002/aisy.202000247},
+  keywords  = {human motor control, intrinsic motivation, movement primitives, Probabilistic Inference, Reinforcement Learning, spiking},
+  pubstate  = {published},
+  tppubtype = {article},
+  url       = {https://ai-lab.science/wp/AIS2021Cansev.pdf, Article Preprint File},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}

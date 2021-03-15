@@ -28,14 +28,24 @@ date_format = "Jan 2006"
   date_end = ""
   description = ""
 
-  [[item]]
-    organization = "Coursera"
-    organization_url = "https://www.coursera.org"
-    title = "Linear Circuits 2: AC Analysis"
-    url = ""
-    certificate_url = "https://drive.google.com/file/d/1V-WoLlBa3lzq2ielR0_gFIkEBzHOE1BR/view?usp=sharing"
-    date_start = "2020-12-03"
-    date_end = ""
-    description = ""
+[[item]]
+  organization = "Coursera"
+  organization_url = "https://www.coursera.org"
+  title = "Linear Circuits 2: AC Analysis"
+  url = ""
+  certificate_url = "https://drive.google.com/file/d/1V-WoLlBa3lzq2ielR0_gFIkEBzHOE1BR/view?usp=sharing"
+  date_start = "2020-12-03"
+  date_end = ""
+  description = ""
+
+[[item]]
+  organization = "Coursera"
+  organization_url = "https://www.coursera.org"
+  title = "Introduction to Electronics"
+  url = ""
+  certificate_url = "https://drive.google.com/file/d/1e46oFq2Vb7N8hOjjobNmoNzQt_vzoPpD/view?usp=sharing"
+  date_start = "2021-03-15"
+  date_end = ""
+  description = ""
 
 +++
