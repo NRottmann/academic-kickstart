@@ -19,7 +19,7 @@ image:
 
 This is a tutorial on how to set up your Raspberry Pi for controlling a mobile robot. Therefore, we will use the Robot Operating System (ROS) together with different connection possibilities (e.g. WLAN, Mobile Net, ...).
 
-A complete Image with existing ROS installation and WLAN access point can be found [here](https://drive.google.com/file/d/14kYuFTbEE-RQ3aikde9BUBpjqiKg_Hy9/view?usp=sharing). It has everything installed and configured until including the [WLAN Configuration](#WLAN) section.
+A complete Image with existing ROS installation and WLAN access point can be found [here](https://drive.google.com/file/d/14kYuFTbEE-RQ3aikde9BUBpjqiKg_Hy9/view?usp=sharing). It has everything installed and configured until including the [Enable SPI and UART Connection](#UART) section.
 
 
 
@@ -51,7 +51,7 @@ A complete Image with existing ROS installation and WLAN access point can be fou
 
 ## Install Raspberry Pi OS <a name="instalOS"></a>
 
-First, we install Raspberry Pi OS onto the Raspberry Pi. There are different Images available (e.g. desktop, Lite) which can be found [here](https://www.raspberrypi.org/downloads/raspberry-pi-os/). We will use the Lite version to not burden our robot with unnecessary computational load. Download the ZIP folder of your chosen Raspberry OS version and load it onto a Micro SD card (e.g. 32 GB). We use the Win32 Disk Manager (Windows), which can be found [here](https://www.chip.de/downloads/Win32-Disk-Imager_46121030.html). Therefore, unpack the downloaded ZIP folder (it contains an .img file of the OS), start the Win32 Disk Manager, choose the .img-file and the right data medium and start writing onto the SD card.
+First, we install Raspberry Pi OS onto the Raspberry Pi. There are different Images available (e.g. desktop, Lite) which can be found [here](https://www.raspberrypi.org/downloads/raspberry-pi-os/). We will use the Desktop version (Raspberry Pi Os (32 Bit)). The easiest way is to use the Rapsberry Pi Imager to load the image onto your SD card (e.g. 32 GB). Optional you can download the ZIP folder of your chosen Raspberry OS version and load it onto a Micro SD card with your own software, e.g. the Win32 Disk Manager (Windows), which can be found [here](https://www.chip.de/downloads/Win32-Disk-Imager_46121030.html). Therefore, unpack the downloaded ZIP folder (it contains an .img file of the OS), start the Win32 Disk Manager, choose the .img-file and the right data medium and start writing onto the SD card.
 
 <p float="left" align="middle">
   <img src="./images/WinDisk32.png" width="400 hspace="0" />
@@ -414,8 +414,24 @@ That defines for the 4 USB ports of the Raspberry Pi the static addresses sensor
   <img src="./images/USBPorts.png" width="800 hspace="0" />
 </p>
 
+The KERNELS might differ in your case, dependent on your hardware settings. To find out your KERNELS for the individual USB ports, plug a USB device into each port (one by one) and check
 
-To apply the new rules we have to reload them with the udevadm manager as super user
+````shell
+udevadm info -a -p $(udevadm info -q path -n /dev/ttyACM0)
+````
+
+Your will receive the current serial connection information and will find something like
+
+````shell
+...
+
+looking at parent device '/devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3:1.3':
+    KERNELS=="1-3:1.3"
+
+...
+````
+
+where everything before the colon, thus "1-3", would be your entry for the KERNELS in the udev rules. To apply the new rules we have to reload them with the udevadm manager as super user
 
 ````shell
 sudo su
@@ -674,7 +690,7 @@ where we insert the correct static server IP. Put the "client1.key", "client1.cr
 sudo openvpn client.conf
 ````
 
-#### Test the System 
+#### Test the System
 
 In order to check if our system works for sending ROS messages, we can use a simple talker node. Therefore, download the [sample code](https://drive.google.com/drive/folders/1PC52Sx3O7vkILSU1u4OL9ehUbs8QH7KW?usp=sharing) onto one of your clients which consist of a ROS package, which should be placed into the "src" folder of a catkin workspace. Thus, we first create such a workspace and "src" folder
 
@@ -714,7 +730,7 @@ v4l2-ctl --device=0 --list-formats-ext
 
 #### Streaming via VLC
 
-We can now feed forward the video stream via a VLC server installing first VLC 
+We can now feed forward the video stream via a VLC server installing first VLC
 
 ````shell
 sudo apt-get install vlc
@@ -734,7 +750,7 @@ rtsp://141.83.19.37:8554/
 
 #### Video to ROS
 
-In order to feed forward video data to the ROS system, we can use "usb_cam" together with "compressed_image_transport". Unfortunately, ROS currently does not support the H.264 format such that we have to use the MJPG compression format. Start now by installing the required nodes following up [this procedure](http://wiki.ros.org/ROSberryPi/Installing ROS Melodic on the Raspberry Pi#Adding_Released_Packages) 
+In order to feed forward video data to the ROS system, we can use "usb_cam" together with "compressed_image_transport". Unfortunately, ROS currently does not support the H.264 format such that we have to use the MJPG compression format. Start now by installing the required nodes following up [this procedure](http://wiki.ros.org/ROSberryPi/Installing ROS Melodic on the Raspberry Pi#Adding_Released_Packages)
 
 ````shell
 cd ~/ros_catkin_ws
